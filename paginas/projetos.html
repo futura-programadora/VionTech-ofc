@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/projetos.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>VionTech - projetos</title>
 </head>
 <body>
@@ -12,15 +14,17 @@
                 <header>
                     <div class="icon-header">
                         <!--icone-->
+                        <i class="ri-terminal-box-fill"></i>
                     </div>
                     <nav class="link-header">
-                        <a  href=""></a>
-                        <a  href=""></a>
-                        <a  href=""></a>
-                        <a  href=""></a>
+                        <a  href="../index.html">ínicio</a>
+                        <a  href="projetos.html">Projetos</a>
+                        <a  href="contato.html">Contato</a>
+                        <a  href="">Ebooks</a>
                     </nav>
                     <div class="menu-hamburguer">
                         <!--icone do menu-->
+                        <i class="ri-menu-3-line"></i>
                     </div>
                 </header>
             </section>
@@ -36,79 +40,100 @@
         <!--DESCRICAO-DA-PAGINA-->
         <section class="descricao-pagina">
             <p class="descricao">
-
+                Neste espaço, você encontrará modelos incríveis para seus projetos, criados com foco em inovação e nas mais avançadas tecnologias.
             </p>
             <p class="pergunta-descricao">
-
+                <strong>Esses modelos podem te inspirar para algum projeto?</strong>
             </p>
         </section>
 
         <!--SECTION TITULO MODELOS APPS-->
         <section class="modelos">
             <!--ICONE -->
+            <i class="ri-arrow-right-s-line"></i>
             <p class="modelo">
-
+              <i class="ri-smartphone-line"></i>
+              Modelos de Apps  
             </p>
         </section>
 
         <!--MODELOS DE APPS-->
         <section class="modelos-dos-apps">
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app1.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app2.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app3.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app4.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app5.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app6.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app7.webp" alt="">
             </section>
 
             <section class="card-img-app">
-
+                <img class="img-app" src="../imagens/modelo de app8.webp" alt="">
             </section>
 
         </section>
 
+        
+
         <!--SECTION TITULO MODELOS WEB-->
         <section class="modelos">
             <!--ICONE -->
+            <i class="ri-arrow-right-s-line"></i>
             <p class="modelo">
-
+              <i class="ri-computer-line"></i> 
+              Modelos Web 
             </p>
+        </section>
+
+        <!--MODELOS WEB-->
+        <section class="modelos-web">
+            <section class="card-img-web">
+                <img class="img-app" src="../imagens/site 1.webp" alt="">
+            </section>
+
+            <section class="card-img-web">
+                <img class="img-app" src="../imagens/site 2.webp" alt="">
+            </section>
         </section>
 
         <!--CARROSSEL DE IMAGENS-->
         <section class="carrossel">
             <!--icone na frente do carrossel -->
+            <i class="ri-arrow-right-s-line"></i>
             <section class="imgs-carrosel">
-                <section class="img-carrossel-card"><img src="" alt=""></section>
-                <section class="img-carrossel-card"><img src="" alt=""></section>
-                <section class="img-carrossel-card"><img src="" alt=""></section>
-                <section class="img-carrossel-card"><img src="" alt=""></section>
+                <section class="img-carrossel-card"><img src="../imagens/site 3.webp" alt=""></section>
+                <section class="img-carrossel-card"><img src="../imagens/site 4.webp" alt=""></section>
+                <section class="img-carrossel-card"><img src="../imagens/site 5.webp" alt=""></section>
+                <section class="img-carrossel-card"><img src="../imagens/site 6.webp" alt=""></section>
             </section>
-            <a class="conheca-mais-modelos" href=""></a>
+            <a class="conheca-mais-modelos" href="">Conheça mais modelos</a>
         </section>
 
         <section class="copy">
-            <p></p>
+            <p>&copy; <span id="current-year"></span> VionTech. Todos os direitos reservados.</p>
+            <script>//data do ano
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
         </section>
 
     </section>
