@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/contato.css">
     <title>VionTech - Contato</title>
 </head>
 <body>
@@ -13,15 +15,17 @@
                 <header>
                     <div class="icon-header">
                         <!--icone-->
+                        <i class="ri-terminal-box-fill"></i>
                     </div>
                     <nav class="link-header">
-                        <a  href=""></a>
-                        <a  href=""></a>
-                        <a  href=""></a>
-                        <a  href=""></a>
+                        <a  href="../index.html">ínicio</a>
+                        <a  href="projetos.html">Projetos</a>
+                        <a  href="contato.html">Contato</a>
+                        <a  href="">Ebooks</a>
                     </nav>
                     <div class="menu-hamburguer">
                         <!--icone do menu-->
+                        <i class="ri-menu-3-line"></i>
                     </div>
                 </header>
             </section>
@@ -29,7 +33,7 @@
 
         <!--ENTRE EM CONTATO TITULO-->
         <section class="entre-em-contato">
-            <h1 class="titulo-contato">entre-em-contato
+            <h1 class="titulo-contato">
                 Entre em contato
             </h1>
         </section>
@@ -37,10 +41,12 @@
         <!--ENTRE EM CONTATO FORMULARIO-->
         <section class="container-contato">
             <form action="" class="contato">
-                <label for="email"><!--icone-->Email</label>
+                <section class="label-form"><label for="email"><i class="ri-mail-send-fill"></i><!--icone-->Email</label></section>
+
                 <input type="text" name="email" id="email" placeholder="ex: viontechofc@gmail.com"><br>
 
-                <label for="mensagem"><!--icone-->Mensagem</label>
+                <section class="label-form"><label for="mensagem"><i class="ri-message-fill"></i><!--icone-->Mensagem</label></section>
+
                 <input type="text" name="mensagem" id="mensagem" placeholder="Motivo do contato, escreva de forma detalhada...">
                 <button type="submit">Enviar para o administrador</button>
             </form>
@@ -48,35 +54,45 @@
 
         <!--SESSÃO PARCERIA-->
         <section class="container-parceria">
-            <!--icone-->
-            <h1 class="titulo-parceria">
-                Torne-se Parceria
-            </h1>
+            <section class="titulo-parceria">
+                <img class="verificado" src="../imagens/verified-badge-fill.png" alt=""><!--icone-->
+                <h1 class="titulo-parceria">
+                    Torne-se Parceria
+                </h1>
+            </section>
+
             <section class="form-parceria-container">
                 <section class="form-parceria">
                     <div class="nome-idade">
-
+                        <input class="nome" type="text" name="nome" id="nome">
+                        <input class="idade" type="number" name="idade" id="idade">
                     </div>
                     <div class="numero-profissao">
-
+                        <input class="tel" type="number" name="tel" id="tel">
+                        <select class="profissao" name="profissao" id="profissao">
+                            <option value="0">Profissão</option>
+                        </select>
                     </div>
                     <div class="email-parceria">
-
+                        <input type="email" name="email" id="email">
                     </div>
                     <button type="submit">Enviar para avaliação</button>
                 </section>
             </section>
+
         </section>
 
         <!--COMO FUNCIONA NOSSA PARCERIA-->
         <section class="container-explicativo-parceria">
-            <!--ICONE-->
-            <h1 class="como-funciona-parceria">
-                Como funciona a Nossa Parceria
-            </h1>
-            <p class="paragrafo-parceria"></p>
-            <p class="paragrafo-parceria"></p>
-            <p class="paragrafo-parceria"></p>
+            <section class="titulo-como funciona-parceria">
+                <img src="../imagens/bar-chart-box-ai-line (1).png" alt=""><!--ICONE-->
+                <h1 class="como-funciona-parceria">
+                     Como funciona a Nossa Parceria
+                </h1>
+            </section>
+            <p class="paragrafo-parceria">Nossa parceria é estruturada de forma a criar um benefício mútuo e equilibrado para ambas as partes. Quando um projeto dentro da área escolhida por você surgir, o cliente será direcionado para o seu atendimento, garantindo que você tenha a oportunidade de gerenciar e executar o trabalho.</p>
+            <p class="paragrafo-parceria">A divisão do valor do projeto é estabelecida em 60% para você e 40% para a minha parte. Essa divisão reflete o papel fundamental que desempenho na geração de novos negócios, por meio da captação de clientes e da promoção dos seus serviços. A minha contribuição é garantir que você tenha acesso a um fluxo constante de clientes qualificados, permitindo que foque no que faz de melhor: entregar um trabalho de excelência.</p>
+            <p class="paragrafo-parceria">Com essa estrutura, buscamos criar uma colaboração justa, onde você é recompensado pela execução do projeto, e eu sou recompensado pela criação das oportunidades que viabilizam esses projetos. Acreditamos que essa abordagem fortalece a parceria e gera resultados sustentáveis para ambos.</p>
         </section>
 
         <!--NEGOCIOS DIRETOS-->
@@ -84,10 +100,16 @@
             <h1 class="negocios-diretos">
                 Negócios diretos
             </h1>
-            <!--icone telefone-->
-            <p class="numero">+55 (11) 95118-2656</p>
-            <!--icone mensagme-->
-            <p class="mensagem">viontechofc@gmail.com</p>
+            <section class="container-numero">
+                <!--icone telefone-->
+                <i class="ri-phone-fill"></i>
+                <p class="numero">+55 (11) 95118-2656</p>
+            </section>
+            <section class="container-email">
+                <!--icone mensagem-->
+                <i class="ri-chat-smile-fill"></i>
+                <p class="mensagem">viontechofc@gmail.com</p>
+            </section>
         </section>
 
         <section class="copy">

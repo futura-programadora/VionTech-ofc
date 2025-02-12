@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+:root {
+    --verde-claro: #eaf4f6;
+    --verde: #0097b2;
+    --verde-escuro: #005564;
+    --preto: black;
+    --cinza: rgb(199, 199, 199);
+    --branco: #ffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family:"Aleo", sans-serif;
+}
+
+.ri-terminal-box-fill {
+    color: black;
+    font-size: 50px;
+}
+

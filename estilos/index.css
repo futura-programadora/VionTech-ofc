@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+    margin: 0px;
+}
+
 :root {
     --verde-claro: #eaf4f6;
     --verde: #0097b2;
@@ -12,7 +16,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family:"Aleo", sans-serif;
+    font-family: "Aleo", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .ri-terminal-box-fill {
@@ -20,3 +28,310 @@ body {
     font-size: 50px;
 }
 
+.verde-claro {
+    background-color: var(--verde-claro);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 0px 1%;
+
+    & nav>a {
+        color: var(--preto);
+        padding: 0px 5px;
+        position: relative;
+        padding-bottom: 0.75rem;
+        font-weight: bold;
+    }
+
+    & nav>a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--verde-escuro);
+        transition: all 0.3s ease;
+    }
+
+    & nav>a:hover::after {
+        width: 70%;
+    }
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.aprensentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 30px;
+    padding-bottom: 150px;
+
+}
+
+.titulo-apresentacao {
+    font-weight: 600;
+    font-size: 50px;
+    font-family: "Aleo";
+
+    & span {
+        font-weight: 100;
+    }
+}
+
+.paragrafo-apresentacao {
+    font-size: 14px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.img-apresentacao img {
+    padding-right: 20px;
+    max-width: 800px;
+}
+
+.sobre-nos {
+    width: 75%;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -100px;
+    /*sobre o item sem alterar o resto*/
+    background-color: var(--branco);
+
+    & h1 {
+        font-family: "Aleo";
+        padding: 10px 0px;
+    }
+
+    & p {
+        padding-bottom: 20px;
+    }
+}
+
+.nosso-trajeto-container {
+    display: flex;
+    justify-content: space-between;
+
+    & .nosso-trajeto {
+        color: var(--verde);
+        font-family: "Aleo";
+        padding: 10px 0px;
+    }
+}
+
+
+.servicos-container .servicos-procurados,
+.nossos-servicos {
+    text-align: center;
+    padding: 10px 0px;
+    font-family: "Aleo";
+}
+
+.servicos-procurados {
+    color: var(--verde);
+}
+
+.card-servico {
+    width: 80%;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-wrap: wrap;
+    margin: auto;
+    height: 300px;
+    position: relative;
+
+
+
+    & .buttom-card {
+        background-color: #005564;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        /* Faz o botão se fixar na parte inferior */
+        bottom: 0;
+        /* Garante que o botão fique na parte de baixo */
+        margin-bottom: 10px;
+
+    }
+
+    & .buttom-card a {
+        color: var(--branco);
+        font-size: 14px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+    gap: 20px;
+    padding: 25px;
+    margin: auto;
+
+}
+
+.titulo-card {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.icon-card i {
+    font-size: 30px;
+    color: var(--preto);
+}
+
+.icon-card {
+    margin: 10px;
+}
+
+.numeros-nosso-forte {
+    background: linear-gradient(to right, var(--preto), var(--verde-escuro)); /* Degradê de preto para o verde */
+    text-align: center;
+    color: var(--branco);
+    padding: 20px;
+}
+
+.container-numeros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    margin: auto;
+}
+
+.parcerias, .experiencia, .clientes {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-wrap: wrap;
+    margin: auto;
+    position: relative;
+}
+
+
+
+
+/*Media queries*/
+
+/* Mostrar o menu hambúrguer em telas menores */
+@media (max-width: 500px) {
+    .link-header {
+        display: none;
+    }
+
+    .menu-hamburguer>i {
+        font-size: 40px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+
+    }
+
+    .link-header {
+        display: none;
+        /* Ocultar o menu padrão em telas pequenas */
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        background-color: white;
+        position: absolute; /* Faz o menu flutuar sobre outros elementos */
+        top: 80px;  /* Ajuste para a posição desejada */
+        right: 0;
+        padding: 10px;
+        z-index: 1000;  /* Coloca o menu acima de outros elementos com z-index menor */
+    }
+    
+
+    .link-header.show {
+        display: flex;
+        /* Mostrar o menu quando ativado */
+        font-weight: bold;
+        padding-right: 0px;
+        background-size: auto;
+    }
+
+    .link-header>a {
+        padding: 10px 20px;
+    }
+
+    .aprensentacao {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .img-apresentacao {
+        padding-top: 20px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .titulo-apresentacao {
+        font-size: 40px;
+    }
+
+    .img-apresentacao img {
+        width: 350px;
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+    .titulo-apresentacao {
+        font-size: 40px;
+    }
+
+    .img-apresentacao img {
+        width: 350px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .titulo-apresentacao {
+        font-size: 35px;
+    }
+
+    .img-apresentacao img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-apresentacao {
+        font-size: 30px;
+    }
+
+    .img-apresentacao img {
+        width: 300px;
+    }
+
+    .paragrafo-apresentacao {
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+}

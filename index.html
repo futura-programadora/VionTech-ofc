@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>VionTech</title>
 </head>
+
 <body>
     <section class="container">
         <section class="verde-claro">
@@ -18,14 +20,14 @@
                         <i class="ri-terminal-box-fill"></i>
                     </div>
                     <nav class="link-header">
-                        <a  href="#">ínicio</a>
-                        <a  href="./paginas/projetos.html">Projetos</a>
-                        <a  href="./paginas/contato.html">Contato</a>
-                        <a  href="">Ebooks</a>
+                        <a href="#">ínicio</a>
+                        <a href="./paginas/projetos.html">Projetos</a>
+                        <a href="./paginas/contato.html">Contato</a>
+                        <a href="">Ebooks</a>
                     </nav>
                     <div class="menu-hamburguer">
                         <!--icone do menu-->
-                        <i class="ri-menu-3-line"></i>
+                        <i onclick="toggleMenu()" class="ri-menu-3-line"></i>
                     </div>
                 </header>
             </section>
@@ -33,16 +35,18 @@
             <section class="aprensentacao">
                 <section class="texto-apresentacao">
                     <h1 class="titulo-apresentacao">
-                        sejam <span>bem-vindos</span> ao <!--font Aleo-->
-                        meu Portifólio e ambiente de trabalho
+                        SEJAM <span>BEM-VINDOS</span> AO <!--font Aleo-->
+                        MEU PORTIFÓLIO E AMBIENTE DE TRABALHO
                     </h1>
                     <p class="paragrafo-apresentacao"><!--font poppins-->
-                        Fico feliz por você estar aqui. Este espaço foi criado para compartilhar um pouco sobre mim, meu 
-                        trabalho e as minhas paixões. Aqui, você vai encontrar projetos que refletem minha dedicação, criatividade e o amor que tenho pelo que faço. Se você tiver alguma dúvida ou quiser conversar sobre um novo projeto, não hesite em me chamar! Vamos transformar ideias em realidade juntos.
+                        Fico feliz por você estar aqui. Este espaço foi criado para compartilhar um pouco sobre mim, meu
+                        trabalho e as minhas paixões. Aqui, você vai encontrar projetos que refletem minha dedicação,
+                        criatividade e o amor que tenho pelo que faço. Se você tiver alguma dúvida ou quiser conversar
+                        sobre um novo projeto, não hesite em me chamar! Vamos transformar ideias em realidade juntos.
                     </p>
                 </section>
                 <section class="img-apresentacao">
-                    <img src="" alt="">
+                    <img src="./imagens/foto_header_viontech-removebg-preview.png" alt="">
                 </section>
             </section>
 
@@ -50,15 +54,26 @@
 
         <!--SOBRE NOS-->
         <section class="sobre-nos">
-            <p class="nosso-trajeto">Nosso Trajeto</p><!--font ALeo-->
+            <section class="nosso-trajeto-container">
+                <p class="nosso-trajeto">Nosso Trajeto</p><!--font ALeo-->
+                <i class="ri-code-s-slash-line"></i>
+            </section>
             <h1 class="sobreNos">
-                Sobre nos
+                SOBRE NOS
             </h1>
             <p>
-                Somos um time de desenvolvedores full stack dedicados, apaixonados por tecnologia e comprometidos em entregar soluções inovadoras para transformar ideias em realidade. Combinamos habilidades técnicas de ponta com uma abordagem colaborativa para criar produtos digitais completos e eficientes.
+                Somos um time de <strong>desenvolvedores full stack</strong> dedicados, apaixonados por tecnologia e
+                comprometidos em
+                entregar soluções inovadoras para transformar ideias em realidade. Combinamos habilidades técnicas de
+                ponta com uma abordagem colaborativa para criar produtos digitais completos e eficientes.
             </p>
             <p>
-                Com experiência em todas as camadas do desenvolvimento, nossa equipe é capaz de trabalhar tanto no front-end quanto no back-end, proporcionando aos nossos clientes uma experiência fluida e integrada. Do design da interface até a implementação de sistemas robustos, entregamos soluções que atendem às necessidades específicas de cada projeto, sempre com foco na escalabilidade e no desempenho.
+                Com <strong>experiência em todas as camadas do desenvolvimento</strong>, nossa equipe é capaz de
+                trabalhar tanto no
+                <strong>front-end</strong> quanto no <strong>back-end</strong>, proporcionando aos nossos clientes uma
+                experiência fluida e integrada. Do
+                design da interface até a implementação de sistemas robustos, entregamos soluções que atendem às
+                necessidades específicas de cada projeto, sempre com foco na escalabilidade e no desempenho.
             </p>
         </section>
 
@@ -66,63 +81,71 @@
         <section class="servicos-container">
             <p class="servicos-procurados">Serviços mais procurados</p>
             <h1 class="nossos-servicos">
-                Nossos Serviços
+                NOSSOS SERVIÇOS
             </h1>
+            <section class="cards">
 
-            <section class="card-servico">
-                <h1 class="titulo-card">
-                    Desenvolvimento Web Completo (Full Stack):
-                </h1>
-                <div>
-                    <!--icone-->
-                    <i class="ri-window-fill"></i>
-                </div>
-                <p class="descricao-trabalho">
-                    Criamos aplicações web personalizadas do zero, utilizando as melhores práticas e tecnologias como React, Node.js, Express, MongoDB e muitas outras.
-                </p>
-                <a class="button-servicos" href="">Contratar esse Serviço</a>
-            </section>
+                <section class="card-servico">
+                    <h1 class="titulo-card">
+                        Desenvolvimento Web Completo (Full Stack):
+                    </h1>
+                    <div class="icon-card" >
+                        <!--icone-->
+                        <i class="ri-window-fill"></i>
+                    </div>
+                    <p class="descricao-trabalho">
+                        Criamos aplicações web personalizadas do zero, utilizando as melhores práticas e tecnologias
+                        como
+                        React, Node.js, Express, MongoDB e muitas outras.
+                    </p>
+                    <div class="buttom-card" ><a class="button-servicos" href="">Contratar esse Serviço</a></div>
+                </section>
 
-            <section class="card-servico">
-                <h1 class="titulo-card">
-                    Criação de APIs e Integrações: 
-                </h1>
-                <div>
-                    <!--icone-->
-                    <i class="ri-stack-line"></i>
-                </div>
-                <p class="descricao-trabalho">
-                    Desenvolvemos APIs RESTful eficientes, além de integrar sistemas e serviços de forma inteligente e segura.
-                </p>
-                <a class="button-servicos" href="">Contratar esse Serviço</a>
-            </section>
+                <section class="card-servico">
+                    <h1 class="titulo-card">
+                        Criação de APIs e Integrações:
+                    </h1>
+                    <div class="icon-card" >
+                        <!--icone-->
+                        <i class="ri-stack-line"></i>
+                    </div>
+                    <p class="descricao-trabalho">
+                        Desenvolvemos APIs RESTful eficientes, além de integrar sistemas e serviços de forma inteligente
+                        e
+                        segura.
+                    </p>
+                    <div class="buttom-card" ><a class="button-servicos" href="">Contratar esse Serviço</a></div>
+                </section>
 
-            <section class="card-servico">
-                <h1 class="titulo-card">
-                    Design Responsivo e UX/UI:
-                </h1>
-                <div>
-                    <!--icone-->
-                    <i class="ri-bookmark-3-line"></i>
-                </div>
-                <p class="descricao-trabalho">
-                    Criamos interfaces de usuário intuitivas e responsivas, com foco na melhor experiência para o usuário final.
-                </p>
-                <a class="button-servicos" href="">Contratar esse Serviço</a>
-            </section>
+                <section class="card-servico">
+                    <h1 class="titulo-card">
+                        Design Responsivo e UX/UI:
+                    </h1>
+                    <div class="icon-card" >
+                        <!--icone-->
+                        <i class="ri-bookmark-3-line"></i>
+                    </div>
+                    <p class="descricao-trabalho">
+                        Criamos interfaces de usuário intuitivas e responsivas, com foco na melhor experiência para o
+                        usuário final.
+                    </p>
+                    <div class="buttom-card" ><a class="button-servicos" href="">Contratar esse Serviço</a></div>
+                </section>
 
-            <section class="card-servico">
-                <h1 class="titulo-card">
-                    Manutenção e Suporte: 
-                </h1>
-                <div>
-                    <!--icone-->
-                    <i class="ri-list-settings-line"></i>
-                </div>
-                <p class="descricao-trabalho">
-                    Oferecemos manutenção contínua e atualizações regulares para garantir o bom funcionamento e a segurança do seu sistema.
-                </p>
-                <a class="button-servicos" href="">Contratar esse Serviço</a>
+                <section class="card-servico">
+                    <h1 class="titulo-card">
+                        Manutenção e Suporte:
+                    </h1>
+                    <div class="icon-card" >
+                        <!--icone-->
+                        <i class="ri-list-settings-line"></i>
+                    </div>
+                    <p class="descricao-trabalho">
+                        Oferecemos manutenção contínua e atualizações regulares para garantir o bom funcionamento e a
+                        segurança do seu sistema.
+                    </p>
+                    <div class="buttom-card" ><a class="button-servicos" href="">Contratar esse Serviço</a></div>
+                </section>
             </section>
         </section>
 
@@ -156,7 +179,7 @@
 
         <!--ALGUMA DUVIDA-->
         <section class="alguma-duvida">
-           
+
             <div class="duvidas">
                 <h1>Alguma dúvida?</h1><br>
 
@@ -170,7 +193,7 @@
             </div>
             <div class="tela-de-respostas">
                 <!--TELA ONDE IRÃO APARECER AS RESPOSTAS DAS DUVIDAS-->
-                
+
                 <div class="tela-vazia">
                     <!--icone caso esteja vazio-->
                     <i class="ri-customer-service-2-fill"></i>
@@ -209,11 +232,7 @@
             </script>
         </section>
     </section>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementsByClassName('.link-header');
-            menu.classList.toggle(Styles.show);
-        }
-    </script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
