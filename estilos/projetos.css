@@ -11,8 +11,57 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0px;
+}
+
+/*animação pulsante*/
+@keyframes pulsar {
+    0% {
+        /* Ponto inicial: sombra suave e discreta */
+        box-shadow: 0 0 10px rgba(0, 85, 100, 0.5); /* Sombra suave com cor */
+    }
+    25% {
+        /* Sombra um pouco mais intensa, começando a pulsar */
+        box-shadow: 0 0 15px rgba(0, 85, 100, 0.7); /* Sombra um pouco mais intensa */
+    }
+    50% {
+        /* Ponto médio: sombra mais forte e difusa */
+        box-shadow: 0 0 25px rgba(0, 85, 100, 1); /* Sombra forte */
+    }
+    75% {
+        /* Sombra começando a retornar ao estado inicial */
+        box-shadow: 0 0 15px rgba(0, 85, 100, 0.7); /* Sombra voltando */
+    }
+    100% {
+        /* Ponto final: retorna ao estado inicial suave */
+        box-shadow: 0 0 10px rgba(0, 85, 100, 0.5); /* Retorna ao estado inicial */
+    }
+}
+
+
+@keyframes entrarPelaDireita {
+    0% {
+        transform: translateX(100%);
+        /* Começa fora da tela, à esquerda */
+        opacity: 0;
+        /* Totalmente transparente */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Entra na posição original */
+        opacity: 1;
+        /* Totalmente opaco */
+    }
+}
+
 body {
-    font-family:"Aleo", sans-serif;
+    font-family: "Aleo", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .ri-terminal-box-fill {
@@ -21,9 +70,252 @@ body {
 }
 
 .img-app {
-    width: 350px;
+    width: 300px;
+    
 }
 
-.img-carrossel-card img{
+.img-carrossel-card img {
     width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 0px 1%;
+
+    & nav>a {
+        color: var(--preto);
+        padding: 0px 5px;
+        position: relative;
+        padding-bottom: 0.75rem;
+        font-weight: bold;
+    }
+
+    & nav>a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--verde-escuro);
+        transition: all 0.3s ease;
+    }
+
+    & nav>a:hover::after {
+        width: 70%;
+    }
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.verde-claro {
+    background-color: var(--verde-claro);
+    padding-bottom: 50px;
+}
+
+.modelos-de-projetos {
+    border: 1px solid var(--cinza);
+    background-color: var(--branco);
+    width: 75%;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -40px;
+
+    animation: entrarPelaDireita 1s ease-out;
+
+    & h1 {
+        font-family: "Aleo";
+        padding: 10px 0px;
+        text-align: center;
+    }
+}
+
+.descricao-pagina p {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.modelos {
+    background-color: var(--verde-claro);
+    height: 100%;
+    display: flex;
+    padding: 10px;
+
+
+    & i {
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    & p {
+        display: flex;
+        align-items: center;
+        padding: 15px 10px;
+
+    }
+
+
+}
+
+.ri-computer-line, .ri-smartphone-line {
+    padding-right: 10px;
+}
+
+.modelos-dos-apps, .modelos-web {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+    gap: 20px;
+    padding: 25px;
+    
+
+    & .card-img-app, .card-img-web {
+        width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+/*CARROSSEL*/
+.carrossel {
+    position: relative;
+    width: 80%; /* Largura do carrossel */
+    margin: auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Oculta as imagens que estão fora do contêiner */
+}
+
+.imgs-carrosel {
+    display: flex; /* Usando flexbox para alinhar as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave para a animação */
+}
+
+.img-carrossel-card {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura do contêiner */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+.img-carrossel-card img {
+    width: 100%; /* As imagens ocupam toda a largura do cartão */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+.conheca-mais-modelos {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Espaçamento acima do link */
+    color: #007BFF; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.conheca-mais-modelos:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos para os ícones de navegação */
+.ri-arrow-left-s-line, .ri-arrow-right-s-line {
+    position: absolute;
+    top: 50%;
+    font-size: 24px; /* Tamanho do ícone */
+    color: #333; /* Cor do ícone */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+#prev {
+    left: 10px; /* Ajusta a posição conforme necessário */
+}
+
+#next {
+    right: 10px; /* Ajusta a posição conforme necessário */
+}
+
+.container-conheca-mais {
+    display: flex;
+    margin: 10px;
+
+    & a {
+        color: var(--preto);
+        margin-left: auto;
+        background-color: var(--branco);
+        border: 1px solid var(--preto);
+        border-radius: 10px;
+        padding: 10px;
+        animation: pulsar 1.5s infinite
+    }
+
+    & a:hover {
+        text-decoration: none;
+        background: linear-gradient(to right, var(--preto), var(--verde-escuro));
+        color: var(--branco);
+        
+    }
+}
+
+.copy {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Media queries*/
+/* Mostrar o menu hambúrguer em telas menores */
+@media (max-width: 500px) {
+    .link-header {
+        display: none;
+    }
+
+    .menu-hamburguer>i {
+        font-size: 40px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+
+    }
+
+    .link-header {
+        display: none;
+        /* Ocultar o menu padrão em telas pequenas */
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        background-color: white;
+        position: absolute;
+        /* Faz o menu flutuar sobre outros elementos */
+        top: 80px;
+        /* Ajuste para a posição desejada */
+        right: 0;
+        padding: 10px;
+        z-index: 1000;
+        /* Coloca o menu acima de outros elementos com z-index menor */
+    }
+
+
+    .link-header.show {
+        display: flex;
+        /* Mostrar o menu quando ativado */
+        font-weight: bold;
+        padding-right: 0px;
+        background-size: auto;
+    }
+
+    .link-header>a {
+        padding: 10px 20px;
+    }
+
+
 }

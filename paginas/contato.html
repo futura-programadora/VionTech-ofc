@@ -23,7 +23,7 @@
                         <a  href="contato.html">Contato</a>
                         <a  href="">Ebooks</a>
                     </nav>
-                    <div class="menu-hamburguer">
+                    <div onclick="toggleMenu()" class="menu-hamburguer">
                         <!--icone do menu-->
                         <i class="ri-menu-3-line"></i>
                     </div>
@@ -34,7 +34,7 @@
         <!--ENTRE EM CONTATO TITULO-->
         <section class="entre-em-contato">
             <h1 class="titulo-contato">
-                Entre em contato
+                ENTRE EM CONTATO
             </h1>
         </section>
 
@@ -47,14 +47,14 @@
 
                 <section class="label-form"><label for="mensagem"><i class="ri-message-fill"></i><!--icone-->Mensagem</label></section>
 
-                <input type="text" name="mensagem" id="mensagem" placeholder="Motivo do contato, escreva de forma detalhada...">
-                <button type="submit">Enviar para o administrador</button>
+                <textarea id="mensagem" placeholder="Digite sua mensagem de forma detalhada..."></textarea>
+                <button class="bnt-form" type="submit">Enviar para o administrador</button>
             </form>
         </section>
 
         <!--SESSÃO PARCERIA-->
         <section class="container-parceria">
-            <section class="titulo-parceria">
+            <section class="titulo-parceria-container">
                 <img class="verificado" src="../imagens/verified-badge-fill.png" alt=""><!--icone-->
                 <h1 class="titulo-parceria">
                     Torne-se Parceria
@@ -64,27 +64,27 @@
             <section class="form-parceria-container">
                 <section class="form-parceria">
                     <div class="nome-idade">
-                        <input class="nome" type="text" name="nome" id="nome">
-                        <input class="idade" type="number" name="idade" id="idade">
+                        <input class="nome" type="text" name="nome" id="nome" placeholder="Nome completo">
+                        <input class="idade" type="number" name="idade" id="idade" placeholder="Idade">
                     </div>
                     <div class="numero-profissao">
-                        <input class="tel" type="number" name="tel" id="tel">
+                        <input class="tel" type="number" name="tel" id="tel" placeholder="Número com DDD">
                         <select class="profissao" name="profissao" id="profissao">
                             <option value="0">Profissão</option>
                         </select>
                     </div>
                     <div class="email-parceria">
-                        <input type="email" name="email" id="email">
+                        <input class="email" type="email" name="email" id="email" placeholder="Email: viontechofc@gmail.com" >
                     </div>
-                    <button type="submit">Enviar para avaliação</button>
+                    <button class="bnt-parceria" type="submit">Enviar para avaliação</button>
                 </section>
             </section>
 
-        </section>
+        </section><br>
 
         <!--COMO FUNCIONA NOSSA PARCERIA-->
         <section class="container-explicativo-parceria">
-            <section class="titulo-como funciona-parceria">
+            <section class="titulo-como-funciona-parceria">
                 <img src="../imagens/bar-chart-box-ai-line (1).png" alt=""><!--ICONE-->
                 <h1 class="como-funciona-parceria">
                      Como funciona a Nossa Parceria
@@ -113,8 +113,12 @@
         </section>
 
         <section class="copy">
-            <p></p>
+            <p>&copy; <span id="current-year"></span> VionTech. Todos os direitos reservados.</p>
+            <script>//data do ano
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
         </section>
     </section>
+    <script src="../js/index.js"></script>
 </body>
 </html>

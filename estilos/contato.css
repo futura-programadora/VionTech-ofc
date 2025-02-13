@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+    margin: 0px;
+}
+
 :root {
     --verde-claro: #eaf4f6;
     --verde: #0097b2;
@@ -12,7 +16,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family:"Aleo", sans-serif;
+    font-family: "Aleo", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .ri-terminal-box-fill {
@@ -20,3 +28,329 @@ body {
     font-size: 50px;
 }
 
+.verde-claro {
+    background-color: var(--verde-claro);
+    padding-bottom: 50px;
+}
+
+@keyframes entrarPelaDireita {
+    0% {
+        transform: translateX(100%);
+        /* Começa fora da tela, à esquerda */
+        opacity: 0;
+        /* Totalmente transparente */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Entra na posição original */
+        opacity: 1;
+        /* Totalmente opaco */
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 0px 1%;
+
+    & nav>a {
+        color: var(--preto);
+        padding: 0px 5px;
+        position: relative;
+        padding-bottom: 0.75rem;
+        font-weight: bold;
+    }
+
+    & nav>a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--verde-escuro);
+        transition: all 0.3s ease;
+    }
+
+    & nav>a:hover::after {
+        width: 70%;
+    }
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.entre-em-contato {
+    border: 1px solid var(--cinza);
+    background-color: var(--branco);
+    width: 75%;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -40px;
+
+    animation: entrarPelaDireita 1s ease-out;
+
+    & h1 {
+        font-family: "Aleo";
+        padding: 10px 0px;
+        text-align: center;
+    }
+}
+
+.container-contato {
+    background: linear-gradient(to right, var(--preto), var(--verde-escuro));
+    padding: 20px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        color: var(--branco);
+        background-color: rgba(255, 255, 255, 0.384);
+        border-radius: 10px;
+        margin: auto;
+        padding: 20px;
+        height: 80%;
+        width: 90%;
+        max-width: 500px;
+
+        & input,  #mensagem{
+            border: none;
+            padding: 8px;
+            margin: 10px 0px;
+            border-radius: 5px;
+
+        }
+
+        & #mensagem {
+            min-height: 200px; /* Altura mínima */
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #005564; /* Borda do textarea */
+            border-radius: 5px; /* Bordas arredondadas */
+            resize: vertical; /* Permite redimensionar horizontal e verticalmente */
+            color: #333; /* Cor do texto */
+        }
+        
+        /* Estilo para o placeholder */
+        & #mensagem::placeholder {
+            color: var(--preto); /* Cor do placeholder */
+            opacity: 1; /* Garante que o placeholder seja visível */
+        }
+
+
+    }
+
+}
+
+.bnt-form {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18;
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.bnt-form:hover {
+    background-color: rgb(66, 66, 66);
+    color: var(--branco);
+}
+
+.titulo-parceria-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    & .verificado {
+        width: 50px;
+        margin: 0px 10px;
+    }
+
+
+}
+
+.form-parceria-container {
+    border: 3px solid var(--verde);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.nome-idade, .numero-profissao {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.nome {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.idade {
+    width: 20%;
+    padding: 10px; 
+    border-radius: 8px;
+
+}
+
+.tel {
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.profissao {
+    width: 45%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.email {
+    width: 96%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.bnt-parceria {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    padding: 10px 0px;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.bnt-parceria:hover {
+    background-color: rgb(66, 66, 66);
+    color: var(--branco);
+}
+
+.container-explicativo-parceria {
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+}
+
+.titulo-como-funciona-parceria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    & img {
+        width: 50px;
+        margin: 0px 10px;
+    }
+
+}
+
+.paragrafo-parceria {
+    padding: 10px 0px;
+}
+
+.negocios-diretos {
+    padding: 20px;
+    color: var(--verde);
+}
+
+.container-numero, .container-email {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    & p{
+        padding: 10px 0px;
+    }
+
+    & i {
+        padding: 0px 10px;
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+.copy {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .form-parceria-container {
+        width: 80%;
+    }
+    
+    .link-header {
+        display: none;
+    }
+
+    .menu-hamburguer>i {
+        font-size: 40px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+
+    }
+
+    .link-header {
+        display: none;
+        /* Ocultar o menu padrão em telas pequenas */
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        background-color: white;
+        position: absolute;
+        /* Faz o menu flutuar sobre outros elementos */
+        top: 80px;
+        /* Ajuste para a posição desejada */
+        right: 0;
+        padding: 10px;
+        z-index: 1000;
+        /* Coloca o menu acima de outros elementos com z-index menor */
+    }
+
+
+    .link-header.show {
+        display: flex;
+        /* Mostrar o menu quando ativado */
+        font-weight: bold;
+        padding-right: 0px;
+        background-size: auto;
+    }
+
+    .link-header>a {
+        padding: 10px 20px;
+    }
+  
+
+}
