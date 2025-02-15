@@ -21,6 +21,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--preto);
 }
 
 .ri-terminal-box-fill {
@@ -269,6 +270,11 @@ header {
     gap: 20px;
     padding: 25px;
     margin: auto;
+}
+
+.count-parcerias, .count-anos, .count-clientes {
+    font-size: 40px;
+    height: auto;
 }
 
 .parcerias, .experiencia, .clientes {

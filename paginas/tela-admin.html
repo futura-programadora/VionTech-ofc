@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/tela-admin.css">
+    <title>Tela - Admin</title>
+</head>
+
+<body>
+    <section class="container">
+        <section class="header">
+            <a href="../index.html"><i class="ri-user-settings-fill"></i></a>
+        </section>
+        <section class="notificacoes">
+            <div class="titulo-notificacao">
+                <i class="ri-notification-2-fill"></i>
+                <h1>Notificações</h1>
+            </div>
+            <div class="container-overflow">
+                <div id="contatos-container">
+                    <!-- As notificações serão inseridas aqui -->
+                </div>
+            </div><br>
+            <div class="titulo-notificacao">
+                <img class="verificado" src="../imagens/verified-badge-fill.png" alt="">
+                <h1>Parcerias</h1>
+            </div>
+            <div class="container-overflow">
+
+                <div id="parcerias-container">
+                    <!-- As parcerias serão inseridas aqui -->
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+        async function carregarContatos() {
+            try {
+                const response = await fetch("http://localhost:3001/contatos");
+                if (response.ok) {
+                    const contatos = await response.json();
+                    const container = document.getElementById("contatos-container");
+                    container.innerHTML = ""; // Limpa o container antes de adicionar novos contatos
+                    contatos.forEach(contato => {
+                        const divNotificacao = document.createElement("div");
+                        divNotificacao.classList.add("notificacao");
+
+                        const divCard = document.createElement("div");
+                        divCard.classList.add("card-notificacao");
+
+                        const h1Email = document.createElement("h1");
+                        h1Email.classList.add("email-contato");
+                        h1Email.textContent = contato.email;
+
+                        const divMensagem = document.createElement("div");
+                        divMensagem.classList.add("mensagem");
+                        divMensagem.textContent = contato.mensagem;
+
+                        divCard.appendChild(h1Email);
+                        divCard.appendChild(divMensagem);
+                        divNotificacao.appendChild(divCard);
+                        container.appendChild(divNotificacao);
+                    });
+                } else {
+                    alert("Erro ao carregar os contatos.");
+                }
+            } catch (error) {
+                console.error("Erro ao fazer a requisição:", error);
+            }
+        }
+
+        // Função para carregar as parcerias
+        async function carregarParcerias() {
+            try {
+                const response = await fetch("http://localhost:3001/parcerias");
+                if (response.ok) {
+                    const parcerias = await response.json();
+                    const container = document.getElementById("parcerias-container");
+                    container.innerHTML = ""; // Limpa o container antes de adicionar novas parcerias
+                    parcerias.forEach(parceria => {
+                        const divCard = document.createElement("div");
+                        divCard.classList.add("card-parcerias");
+
+                        const h1Profissao = document.createElement("h1");
+                        h1Profissao.classList.add("profissao-parceria");
+                        h1Profissao.textContent = parceria.profissao;
+
+                        const divNome = document.createElement("div");
+                        divNome.classList.add("nome-parceria");
+                        divNome.textContent = parceria.nome;
+
+                        const divIdade = document.createElement("div");
+                        divIdade.classList.add("idade-parceria");
+                        divIdade.textContent = parceria.idade;
+
+                        const divNumero = document.createElement("div");
+                        divNumero.classList.add("numero-parceria");
+                        divNumero.textContent = parceria.numero;
+
+                        const divEmail = document.createElement("div");
+                        divEmail.classList.add("email-parceria");
+                        divEmail.textContent = parceria.email;
+
+                        divCard.appendChild(h1Profissao);
+                        divCard.appendChild(divNome);
+                        divCard.appendChild(divIdade);
+                        divCard.appendChild(divNumero);
+                        divCard.appendChild(divEmail);
+                        container.appendChild(divCard);
+                    });
+                } else {
+                    alert("Erro ao carregar as parcerias.");
+                }
+            } catch (error) {
+                console.error("Erro ao fazer a requisição:", error);
+            }
+        }
+
+        // Função que carrega tanto os contatos quanto as parcerias quando a página for carregada
+        window.onload = function () {
+            carregarContatos();
+            carregarParcerias();
+        }
+
+    </script>
+</body>
+
+</html>
