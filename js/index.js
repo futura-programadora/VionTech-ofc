@@ -37,3 +37,55 @@ setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos
 // Adiciona eventos de clique para navegação manual
 document.getElementById('next').addEventListener('click', nextImage);
 document.getElementById('prev').addEventListener('click', prevImage);
+
+
+
+//BANCO DE DADOS / BACK-END
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM completamente carregado');
+    
+    // Seleciona o formulário e os campos
+    const formulario = document.querySelector('#contato-form');
+    const emailInput = document.querySelector('#email');
+    const mensagemInput = document.querySelector('#mensagem');
+
+    console.log('Elementos selecionados:', { formulario, emailInput, mensagemInput });
+
+    formulario.addEventListener('submit', async function(event) {
+        console.log('Formulário enviado');
+        event.preventDefault(); // Impede o envio do formulário tradicional
+
+        // Captura os dados do formulário
+        const email = emailInput.value;
+        const mensagem = mensagemInput.value;
+        console.log('Dados do formulário:', { email, mensagem });
+
+        // Envia para o backend
+        try {
+            const resposta = await fetch('http://localhost:3001/contato', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, mensagem })
+            });
+
+            console.log('Resposta do backend:', resposta);
+
+            // Verifica se o envio foi bem-sucedido
+            if (resposta.ok) {
+                console.log('Mensagem enviada com sucesso!');
+                alert('Mensagem enviada com sucesso!');
+                formulario.reset(); // Limpa os campos do formulário
+            } else {
+                console.error('Erro ao enviar mensagem:', resposta);
+                alert('Erro ao enviar mensagem');
+            }
+        } catch (erro) {
+            console.error('Erro na requisição:', erro);
+            alert('Erro ao enviar mensagem');
+        }
+    });
+});
+

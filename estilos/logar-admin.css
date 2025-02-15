@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo as cores */
+:root {
+    --verde-claro: #eaf4f6;
+    --verde: #0097b2;
+    --verde-escuro: #005564;
+    --preto: black;
+    --cinza: rgb(199, 199, 199);
+    --branco: #fff;
+}
+
+/* Estilos gerais para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--verde-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+i {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Estilos da container com degradê */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--preto), var(--verde-escuro), var(--verde)); /* Degradê do preto para o verde escuro e verde */
+}
+
+/* Estilos do container de login */
+.container-login {
+    background-color: rgba(255, 255, 255, 0.83);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+
+    & h1 {
+        text-align: center;
+    }
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+
+    /*centraliza a imagem*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ícone de voltar */
+.back-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--verde);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    width: 35px;
+    padding: 5px;
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.back-btn:hover {
+    color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro);
+    
+}
+
+/* Estilos dos inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--verde);
+    box-shadow: 0 0 5px var(--verde);
+}
+
+/* Estilos do botão de login */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container-login {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-login {
+        font-size: 14px;
+    }
+}

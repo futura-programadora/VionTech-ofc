@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../estilos/contato.css">
     <title>VionTech - Contato</title>
 </head>
+
 <body>
     <section class="container">
         <!--HEADER-->
@@ -18,10 +20,10 @@
                         <i class="ri-terminal-box-fill"></i>
                     </div>
                     <nav class="link-header">
-                        <a  href="../index.html">ínicio</a>
-                        <a  href="projetos.html">Projetos</a>
-                        <a  href="contato.html">Contato</a>
-                        <a  href="">Ebooks</a>
+                        <a href="../index.html">ínicio</a>
+                        <a href="projetos.html">Projetos</a>
+                        <a href="contato.html">Contato</a>
+                        <a class="button-servicos" href="./logar-admin.html">Logar como Admin</a>
                     </nav>
                     <div onclick="toggleMenu()" class="menu-hamburguer">
                         <!--icone do menu-->
@@ -40,14 +42,18 @@
 
         <!--ENTRE EM CONTATO FORMULARIO-->
         <section class="container-contato">
-            <form action="" class="contato">
-                <section class="label-form"><label for="email"><i class="ri-mail-send-fill"></i><!--icone-->Email</label></section>
+            <form action="" class="contato" id="contato-form">
+                <section class="label-form">
+                    <label for="email"><i class="ri-mail-send-fill"></i> Email</label>
+                </section>
+                <input type="email" name="email" id="email" placeholder="ex: viontechofc@gmail.com" required><br>
 
-                <input type="text" name="email" id="email" placeholder="ex: viontechofc@gmail.com"><br>
+                <section class="label-form">
+                    <label for="mensagem"><i class="ri-message-fill"></i> Mensagem</label>
+                </section>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem de forma detalhada..."
+                    required></textarea>
 
-                <section class="label-form"><label for="mensagem"><i class="ri-message-fill"></i><!--icone-->Mensagem</label></section>
-
-                <textarea id="mensagem" placeholder="Digite sua mensagem de forma detalhada..."></textarea>
                 <button class="bnt-form" type="submit">Enviar para o administrador</button>
             </form>
         </section>
@@ -62,23 +68,28 @@
             </section>
 
             <section class="form-parceria-container">
-                <section class="form-parceria">
+                <form class="form-parceria">
                     <div class="nome-idade">
-                        <input class="nome" type="text" name="nome" id="nome" placeholder="Nome completo">
-                        <input class="idade" type="number" name="idade" id="idade" placeholder="Idade">
+                        <input class="nome" type="text" name="nome" id="nome" placeholder="Nome completo" required>
+                        <input class="idade" type="number" name="idade" id="idade" placeholder="Idade" required>
                     </div>
                     <div class="numero-profissao">
-                        <input class="tel" type="number" name="tel" id="tel" placeholder="Número com DDD">
-                        <select class="profissao" name="profissao" id="profissao">
+                        <input class="tel" type="number" name="tel" id="tel" placeholder="Número com DDD" required>
+                        <select class="profissao" name="profissao" id="profissao" required>
                             <option value="0">Profissão</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Designer">Designer</option>
+                            <option value="Manager">Manager</option>
                         </select>
                     </div>
                     <div class="email-parceria">
-                        <input class="email" type="email" name="email" id="email" placeholder="Email: viontechofc@gmail.com" >
+                        <input class="email" type="email" name="email" id="email" placeholder="Email: viontechofc@gmail.com" required>
                     </div>
                     <button class="bnt-parceria" type="submit">Enviar para avaliação</button>
-                </section>
+                </form>
             </section>
+            
+            
 
         </section><br>
 
@@ -87,12 +98,22 @@
             <section class="titulo-como-funciona-parceria">
                 <img src="../imagens/bar-chart-box-ai-line (1).png" alt=""><!--ICONE-->
                 <h1 class="como-funciona-parceria">
-                     Como funciona a Nossa Parceria
+                    Como funciona a Nossa Parceria
                 </h1>
             </section>
-            <p class="paragrafo-parceria">Nossa parceria é estruturada de forma a criar um benefício mútuo e equilibrado para ambas as partes. Quando um projeto dentro da área escolhida por você surgir, o cliente será direcionado para o seu atendimento, garantindo que você tenha a oportunidade de gerenciar e executar o trabalho.</p>
-            <p class="paragrafo-parceria">A divisão do valor do projeto é estabelecida em 60% para você e 40% para a minha parte. Essa divisão reflete o papel fundamental que desempenho na geração de novos negócios, por meio da captação de clientes e da promoção dos seus serviços. A minha contribuição é garantir que você tenha acesso a um fluxo constante de clientes qualificados, permitindo que foque no que faz de melhor: entregar um trabalho de excelência.</p>
-            <p class="paragrafo-parceria">Com essa estrutura, buscamos criar uma colaboração justa, onde você é recompensado pela execução do projeto, e eu sou recompensado pela criação das oportunidades que viabilizam esses projetos. Acreditamos que essa abordagem fortalece a parceria e gera resultados sustentáveis para ambos.</p>
+            <p class="paragrafo-parceria">Nossa parceria é estruturada de forma a criar um benefício mútuo e equilibrado
+                para ambas as partes. Quando um projeto dentro da área escolhida por você surgir, o cliente será
+                direcionado para o seu atendimento, garantindo que você tenha a oportunidade de gerenciar e executar o
+                trabalho.</p>
+            <p class="paragrafo-parceria">A divisão do valor do projeto é estabelecida em 60% para você e 40% para a
+                minha parte. Essa divisão reflete o papel fundamental que desempenho na geração de novos negócios, por
+                meio da captação de clientes e da promoção dos seus serviços. A minha contribuição é garantir que você
+                tenha acesso a um fluxo constante de clientes qualificados, permitindo que foque no que faz de melhor:
+                entregar um trabalho de excelência.</p>
+            <p class="paragrafo-parceria">Com essa estrutura, buscamos criar uma colaboração justa, onde você é
+                recompensado pela execução do projeto, e eu sou recompensado pela criação das oportunidades que
+                viabilizam esses projetos. Acreditamos que essa abordagem fortalece a parceria e gera resultados
+                sustentáveis para ambos.</p>
         </section>
 
         <!--NEGOCIOS DIRETOS-->
@@ -119,6 +140,16 @@
             </script>
         </section>
     </section>
-    <script src="../js/index.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.link-header');
+            menu.classList.toggle('show');
+        }
+
+
+        
+    </script>
+    <script src="../js/contato.js"></script>
 </body>
+
 </html>
