@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Envia para o backend
         try {
-            const resposta = await fetch('http://localhost:3001/contato', {
+            const resposta = await fetch('https://back-end-help-service.onrender.com/contato', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Envia os dados para o backend usando Fetch API
         try {
-            const resposta = await fetch('http://localhost:3001/parcerias', {
+            const resposta = await fetch('https://back-end-help-service.onrender.com/parcerias', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
