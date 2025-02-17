@@ -196,7 +196,7 @@ header {
 }
 
 .card-servico {
-    width: 80%;
+    width: 90%;
     border: 1px solid var(--cinza);
     border-radius: 10px;
     padding: 10px;
@@ -502,6 +502,16 @@ footer {
         text-align: center;
         margin: auto;
         gap: 20px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+        gap: 20px;
+        padding: 25px;
+        margin: auto;
+    
     }
 
 }
