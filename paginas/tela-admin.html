@@ -39,7 +39,7 @@
     <script>
         async function carregarContatos() {
             try {
-                const response = await fetch("https://back-end-help-service.onrender.com/contatos");
+                const response = await fetch("https://back-end-help-service.onrender.com/get-contatos");
                 if (response.ok) {
                     const contatos = await response.json();
                     const container = document.getElementById("contatos-container");
@@ -75,7 +75,7 @@
         // Função para carregar as parcerias
         async function carregarParcerias() {
             try {
-                const response = await fetch("https://back-end-help-service.onrender.com/parcerias");
+                const response = await fetch("https://back-end-help-service.onrender.com/parcerias-get");
                 if (response.ok) {
                     const parcerias = await response.json();
                     const container = document.getElementById("parcerias-container");
