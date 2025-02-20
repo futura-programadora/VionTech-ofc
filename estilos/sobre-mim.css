@@ -136,6 +136,11 @@ header {
     margin-bottom: 20px;
 }
 
+.titulo {
+    padding: 20px;
+    text-align: center;
+}
+
 .direita {
     width: 60%;
     padding: 20px;
