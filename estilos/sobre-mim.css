@@ -4,6 +4,13 @@
     margin: 0px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Aleo", sans-serif;
+}
+
+
 :root {
     --verde-claro: #eaf4f6;
     --verde: #0097b2;
@@ -13,3 +20,311 @@
     --branco: #ffff;
 }
 
+@keyframes entrarPelaDireita {
+    0% {
+        transform: translateX(100%);
+        /* Começa fora da tela, à esquerda */
+        opacity: 0;
+        /* Totalmente transparente */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Entra na posição original */
+        opacity: 1;
+        /* Totalmente opaco */
+    }
+}
+
+.container-header {
+    background-color: var(--verde-claro);
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 0px 1%;
+
+    & nav>a {
+        color: var(--preto);
+        padding: 0px 5px;
+        position: relative;
+        padding-bottom: 0.75rem;
+        font-weight: bold;
+    }
+
+    & nav>a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--verde-escuro);
+        transition: all 0.3s ease;
+    }
+
+    & nav>a:hover::after {
+        width: 70%;
+    }
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.ri-terminal-box-fill {
+    color: black;
+    font-size: 50px;
+}
+
+.minha-apresentacao {
+    border: 1px solid var(--cinza);
+    background-color: var(--branco);
+    width: 75%;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -40px;
+
+    animation: entrarPelaDireita 1s ease-out;
+
+    & h1 {
+        margin-bottom: 10px;
+    }
+
+    & i {
+        font-size: 20px;
+    }
+}
+
+.contatos {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 20px;
+    text-align: center;
+
+    & h1 {
+        padding-bottom: 10px;
+    }
+
+    & a {/*link*/
+        color: var(--branco);
+        font-size: 35px;
+        margin: 0px 10px;
+    }
+
+    & i:hover {/*icone em si*/
+        border: 1px solid var(--branco);
+        border-radius: 50%;
+        padding: 10px;
+        transition: all 0.5s ease;
+    }
+}
+
+.experiencias {
+    background-color: var(--verde-claro);
+    margin-bottom: 20px;
+}
+
+.direita {
+    width: 60%;
+    padding: 20px;
+    margin-left: auto;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px #0055648e ;
+    
+    & h1 {
+        margin-bottom: 10px;
+    }
+
+    & .funcao {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+}
+
+.esquerda {
+    width: 60%;
+    padding: 20px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px #0055648e ;
+
+    
+    & h1 {
+        margin-bottom: 10px;
+    }
+
+    & .funcao {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+
+
+}
+
+.projetos {
+    padding: 10px;
+
+    & .aviso {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+.imgs-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+    gap: 20px;
+    padding: 25px;
+
+    & div {
+        background-color: var(--verde-escuro);
+        border-radius: 10px;
+        padding: 20px;
+        height: auto;
+        color: var(--branco);
+
+        & p {
+            padding: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+}
+
+.container-img-projeto img {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.937);
+    
+}
+
+.copy {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Mostrar o menu hambúrguer em telas menores */
+@media (max-width: 500px) {
+    .link-header {
+        display: none;
+    }
+
+    .menu-hamburguer>i {
+        font-size: 40px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+
+    }
+
+    .link-header {
+        display: none;
+        /* Ocultar o menu padrão em telas pequenas */
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        background-color: white;
+        position: absolute; /* Faz o menu flutuar sobre outros elementos */
+        top: 80px;  /* Ajuste para a posição desejada */
+        right: 0;
+        padding: 10px;
+        z-index: 1000;  /* Coloca o menu acima de outros elementos com z-index menor */
+    }
+    
+
+    .link-header.show {
+        display: flex;
+        /* Mostrar o menu quando ativado */
+        font-weight: bold;
+        padding-right: 0px;
+        background-size: auto;
+    }
+
+    .link-header>a {
+        padding: 10px 20px;
+    }
+
+    .aprensentacao {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .img-apresentacao {
+        padding-top: 20px;
+    }
+
+    .duvida {
+        background-color: var(--branco);
+        border: 1px solid var(--cinza);
+        border-radius: 10px;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+        font-weight: 600
+    }
+    
+    .tela-de-respostas {
+        background-color: var(--branco);
+        border-radius: 10px;
+        margin: auto;
+        gap: 20px;
+        padding: 25px;
+        height: 90%;
+        margin-bottom: 60%;
+        width: 250px;
+    }
+
+    .alguma-duvida {
+        background-color: var(--verde-claro);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        text-align: center;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+        gap: 20px;
+        padding: 25px;
+        margin: auto;
+    
+    }
+
+}
