@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+}
+
+:root {
+    --verde-claro: #eaf4f6;
+    --verde: #0097b2;
+    --verde-escuro: #005564;
+    --preto: black;
+    --cinza: rgb(199, 199, 199);
+    --branco: #ffff;
+}
+
