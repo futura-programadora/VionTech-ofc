@@ -206,10 +206,11 @@ header {
         height: auto;
         color: var(--branco);
 
-        & p {
+        & .descricao-projeto {
             padding: 10px;
             text-align: center;
             font-weight: 600;
+            color: var(--branco);
         }
     }
 }

@@ -191,7 +191,7 @@ header {
 /*CARROSSEL*/
 .carrossel {
     position: relative;
-    width: 80%; /* Largura do carrossel */
+    width: 50%; /* Largura do carrossel */
     margin: auto; /* Centraliza o carrossel */
     overflow: hidden; /* Oculta as imagens que estão fora do contêiner */
 }
