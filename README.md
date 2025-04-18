@@ -12,7 +12,7 @@ Sou desenvolvedora fullstack, designer e analista de dados, com experiência em 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Status do Projeto](#status-do-projeto)
 - [Equipe](#equipe)
-- [Contribuição](#contribuição)
+- [Site VionTech](#Site-VionTech)
 
 ## Características
 
@@ -36,7 +36,7 @@ Este site está em desenvolvimento e será atualizado regularmente. Fique atento
 
 Trabalho em conjunto com uma equipe de freelancers especializados em diversas áreas para oferecer o melhor serviço possível aos meus clientes.
 
-## Site VIonTech
+## Site VionTech
 
 - [VionTech](https://futura-programadora.github.io/VionTech-ofc/)
 
