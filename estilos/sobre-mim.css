@@ -80,9 +80,8 @@ header {
     display: none;
 }
 
-.ri-terminal-box-fill {
-    color: black;
-    font-size: 50px;
+.icon-header > img {
+    width: 90px;
 }
 
 .minha-apresentacao {
@@ -239,7 +238,7 @@ header {
 
 
 /* Mostrar o menu hambúrguer em telas menores */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .link-header {
         display: none;
     }

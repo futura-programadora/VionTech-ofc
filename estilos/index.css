@@ -25,9 +25,8 @@ a {
     color: var(--preto);
 }
 
-.ri-terminal-box-fill {
-    color: black;
-    font-size: 50px;
+.icon-header > img {
+    width: 90px;
 }
 
 .verde-claro {
@@ -369,8 +368,10 @@ footer {
         padding: 10px 0px;
     }
 
-    & .ri-terminal-box-fill {
-        padding: 5px;
+    & .logo-footer {
+        margin: auto;
+        width: 60px;
+        padding: 10px;
     }
 
     & .link-coluna {
@@ -421,7 +422,7 @@ footer {
 /*Media queries*/
 
 /* Mostrar o menu hambúrguer em telas menores */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .link-header {
         display: none;
     }

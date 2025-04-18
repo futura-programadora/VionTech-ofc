@@ -23,9 +23,8 @@ a {
     text-decoration: none;
 }
 
-.ri-terminal-box-fill {
-    color: black;
-    font-size: 50px;
+.icon-header > img {
+    width: 90px;
 }
 
 .verde-claro {
@@ -304,7 +303,7 @@ header {
     text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .form-parceria-container {
         width: 80%;
     }
