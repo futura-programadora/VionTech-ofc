@@ -80,7 +80,7 @@ header {
     display: none;
 }
 
-.icon-header > img {
+.icon-header>img {
     width: 90px;
 }
 
@@ -116,13 +116,15 @@ header {
         padding-bottom: 10px;
     }
 
-    & a {/*link*/
+    & a {
+        /*link*/
         color: var(--branco);
         font-size: 35px;
         margin: 0px 10px;
     }
 
-    & i:hover {/*icone em si*/
+    & i:hover {
+        /*icone em si*/
         border: 1px solid var(--branco);
         border-radius: 50%;
         padding: 10px;
@@ -146,8 +148,8 @@ header {
     margin-left: auto;
     border: 1px solid var(--cinza);
     border-radius: 10px;
-    box-shadow: 0px 0px 14px #0055648e ;
-    
+    box-shadow: 0px 0px 14px #0055648e;
+
     & h1 {
         margin-bottom: 10px;
     }
@@ -164,9 +166,9 @@ header {
     padding: 20px;
     border: 1px solid var(--cinza);
     border-radius: 10px;
-    box-shadow: 0px 0px 14px #0055648e ;
+    box-shadow: 0px 0px 14px #0055648e;
 
-    
+
     & h1 {
         margin-bottom: 10px;
     }
@@ -199,26 +201,35 @@ header {
     padding: 25px;
 
     & div {
-        background-color: var(--verde-escuro);
-        border-radius: 10px;
-        padding: 20px;
+        position: relative;
+        background-color: var(--branco);
+        border-radius: 2px;
+        border: 1px solid #008fa974;
+        padding: 5px;
         height: auto;
         color: var(--branco);
 
+        /* Adicionado */
+        display: flex;
+        flex-direction: column;
+
         & .descricao-projeto {
+            margin-top: auto;
+            /* Isso empurra o elemento para o final da coluna */
             padding: 10px;
             text-align: center;
             font-weight: 600;
-            color: var(--branco);
+            color: var(--verde-escuro);
         }
     }
+
 }
 
 .container-img-projeto img {
     width: 100%;
     margin: auto;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.937);
-    
+
 }
 
 .copy {
@@ -259,13 +270,16 @@ header {
         gap: 10px;
         width: 80%;
         background-color: white;
-        position: absolute; /* Faz o menu flutuar sobre outros elementos */
-        top: 80px;  /* Ajuste para a posição desejada */
+        position: absolute;
+        /* Faz o menu flutuar sobre outros elementos */
+        top: 80px;
+        /* Ajuste para a posição desejada */
         right: 0;
         padding: 10px;
-        z-index: 1000;  /* Coloca o menu acima de outros elementos com z-index menor */
+        z-index: 1000;
+        /* Coloca o menu acima de outros elementos com z-index menor */
     }
-    
+
 
     .link-header.show {
         display: flex;
@@ -301,7 +315,7 @@ header {
         margin-bottom: 10px;
         font-weight: 600
     }
-    
+
     .tela-de-respostas {
         background-color: var(--branco);
         border-radius: 10px;
@@ -329,7 +343,7 @@ header {
         gap: 20px;
         padding: 25px;
         margin: auto;
-    
+
     }
 
 }
