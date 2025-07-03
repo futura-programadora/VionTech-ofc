@@ -131,7 +131,7 @@ header {
 
 .titulo-apresentacao {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Aleo";
 
     & span {
@@ -148,7 +148,7 @@ header {
 .img-apresentacao img {
     animation: entrarPelaDireita 1s ease-out;
     padding-right: 20px;
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .sobre-nos {
