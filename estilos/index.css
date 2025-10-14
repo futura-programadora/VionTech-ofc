@@ -270,6 +270,8 @@ header {
     gap: 20px;
     padding: 25px;
     margin: auto;
+
+    
 }
 
 .count-parcerias, .count-anos, .count-clientes {
@@ -288,6 +290,10 @@ header {
     margin: auto;
     position: relative;
     animation: pulsar 1.5s infinite ;
+
+    & h1 {
+        font-size: 15px;
+    }
 }
 
 .alguma-duvida {
