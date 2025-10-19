@@ -1,41 +1,41 @@
 @charset "UTF-8";
 
 * {
-    margin: 0px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: "Aleo", sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
 }
 
-
+/* === VARIÁVEIS === */
 :root {
     --verde-claro: #eaf4f6;
     --verde: #0097b2;
     --verde-escuro: #005564;
-    --preto: black;
-    --cinza: rgb(199, 199, 199);
-    --branco: #ffff;
+    --preto: #000;
+    --cinza: #c7c7c7;
+    --branco: #fff;
 }
 
+/* === ANIMAÇÃO === */
 @keyframes entrarPelaDireita {
     0% {
         transform: translateX(100%);
-        /* Começa fora da tela, à esquerda */
         opacity: 0;
-        /* Totalmente transparente */
     }
-
     100% {
         transform: translateX(0);
-        /* Entra na posição original */
         opacity: 1;
-        /* Totalmente opaco */
     }
 }
 
+/* === HEADER === */
 .container-header {
     background-color: var(--verde-claro);
     padding-bottom: 50px;
@@ -50,188 +50,187 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
-    margin: 0px 1%;
+    margin: 0 1%;
+}
 
-    & nav>a {
-        color: var(--preto);
-        padding: 0px 5px;
-        position: relative;
-        padding-bottom: 0.75rem;
-        font-weight: bold;
-    }
+header nav > a {
+    color: var(--preto);
+    padding: 0 5px;
+    position: relative;
+    padding-bottom: 0.75rem;
+    font-weight: bold;
+}
 
-    & nav>a::after {
-        content: "";
-        position: absolute;
-        height: 3px;
-        width: 0;
-        bottom: 0;
-        left: 0;
-        background-color: var(--verde-escuro);
-        transition: all 0.3s ease;
-    }
+header nav > a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--verde-escuro);
+    transition: all 0.3s ease;
+}
 
-    & nav>a:hover::after {
-        width: 70%;
-    }
+header nav > a:hover::after {
+    width: 70%;
 }
 
 .menu-hamburguer {
     display: none;
 }
 
-.icon-header>img {
+.icon-header > img {
     width: 90px;
 }
 
+/* === APRESENTAÇÃO === */
 .minha-apresentacao {
     border: 1px solid var(--cinza);
     background-color: var(--branco);
     width: 75%;
     margin: auto;
     padding: 40px;
-    border: 1px solid var(--cinza);
     border-radius: 10px;
     margin-bottom: 20px;
     margin-top: -40px;
-
     animation: entrarPelaDireita 1s ease-out;
-
-    & h1 {
-        margin-bottom: 10px;
-    }
-
-    & i {
-        font-size: 20px;
-    }
 }
 
+.minha-apresentacao h1 {
+    margin-bottom: 10px;
+}
+
+.minha-apresentacao i {
+    font-size: 20px;
+}
+
+/* === CONTATOS === */
 .contatos {
     background-color: var(--verde-escuro);
     color: var(--branco);
     padding: 20px;
     text-align: center;
-
-    & h1 {
-        padding-bottom: 10px;
-    }
-
-    & a {
-        /*link*/
-        color: var(--branco);
-        font-size: 35px;
-        margin: 0px 10px;
-    }
-
-    & i:hover {
-        /*icone em si*/
-        border: 1px solid var(--branco);
-        border-radius: 50%;
-        padding: 10px;
-        transition: all 0.5s ease;
-    }
 }
 
+.contatos h1 {
+    padding-bottom: 10px;
+}
+
+.contatos a {
+    color: var(--branco);
+    font-size: 35px;
+    margin: 0 10px;
+}
+
+.contatos i:hover {
+    border: 1px solid var(--branco);
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+/* === EXPERIÊNCIAS === */
 .experiencias {
     background-color: var(--verde-claro);
-    margin-bottom: 20px;
+    padding: 40px 20px;
 }
 
 .titulo {
-    padding: 20px;
     text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 30px;
 }
 
-.direita {
-    width: 60%;
-    padding: 20px;
-    margin-left: auto;
+/* Container geral dos cards */
+.experiencias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilo base dos cards de experiência */
+.card-experiencia {
+    background-color: var(--branco);
     border: 1px solid var(--cinza);
-    border-radius: 10px;
-    box-shadow: 0px 0px 14px #0055648e;
-
-    & h1 {
-        margin-bottom: 10px;
-    }
-
-    & .funcao {
-        font-weight: 600;
-        margin-bottom: 10px;
-        text-decoration: underline;
-    }
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 85, 100, 0.15);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.esquerda {
-    width: 60%;
-    padding: 20px;
-    border: 1px solid var(--cinza);
-    border-radius: 10px;
-    box-shadow: 0px 0px 14px #0055648e;
-
-
-    & h1 {
-        margin-bottom: 10px;
-    }
-
-    & .funcao {
-        font-weight: 600;
-        margin-bottom: 10px;
-        text-decoration: underline;
-    }
-
-
+.card-experiencia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 85, 100, 0.25);
 }
 
+.card-experiencia h1 {
+    font-size: 20px;
+    color: var(--verde-escuro);
+    margin-bottom: 8px;
+}
+
+.card-experiencia .funcao {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--verde);
+    text-decoration: underline;
+}
+
+.card-experiencia p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* === PROJETOS === */
 .projetos {
     padding: 10px;
+}
 
-    & .aviso {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        text-align: center;
-    }
+.projetos .aviso {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .imgs-projetos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
     gap: 20px;
     padding: 25px;
+}
 
-    & div {
-        position: relative;
-        background-color: var(--branco);
-        border-radius: 2px;
-        border: 1px solid #008fa974;
-        padding: 5px;
-        height: auto;
-        color: var(--branco);
+.imgs-projetos div {
+    position: relative;
+    background-color: var(--branco);
+    border-radius: 6px;
+    border: 1px solid #008fa974;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Adicionado */
-        display: flex;
-        flex-direction: column;
-
-        & .descricao-projeto {
-            margin-top: auto;
-            /* Isso empurra o elemento para o final da coluna */
-            padding: 10px;
-            text-align: center;
-            font-weight: 600;
-            color: var(--verde-escuro);
-        }
-    }
-
+.descricao-projeto {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--verde-escuro);
 }
 
 .container-img-projeto img {
     width: 100%;
-    margin: auto;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.937);
-
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
+/* === RODAPÉ === */
 .copy {
     background-color: var(--verde-escuro);
     color: var(--branco);
@@ -241,109 +240,48 @@ header {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-/* Mostrar o menu hambúrguer em telas menores */
+/* === RESPONSIVIDADE === */
 @media (max-width: 600px) {
     .link-header {
         display: none;
     }
 
-    .menu-hamburguer>i {
+    .menu-hamburguer > i {
         font-size: 40px;
     }
 
     .menu-hamburguer {
         display: flex;
-
     }
 
     .link-header {
         display: none;
-        /* Ocultar o menu padrão em telas pequenas */
         flex-direction: column;
         gap: 10px;
         width: 80%;
-        background-color: white;
+        background-color: var(--branco);
         position: absolute;
-        /* Faz o menu flutuar sobre outros elementos */
         top: 80px;
-        /* Ajuste para a posição desejada */
         right: 0;
         padding: 10px;
         z-index: 1000;
-        /* Coloca o menu acima de outros elementos com z-index menor */
     }
-
 
     .link-header.show {
         display: flex;
-        /* Mostrar o menu quando ativado */
         font-weight: bold;
-        padding-right: 0px;
-        background-size: auto;
-    }
-
-    .link-header>a {
-        padding: 10px 20px;
-    }
-
-    .aprensentacao {
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-        text-align: justify;
-    }
-
-    .img-apresentacao {
-        padding-top: 20px;
-    }
-
-    .duvida {
-        background-color: var(--branco);
-        border: 1px solid var(--cinza);
-        border-radius: 10px;
-        padding: 10px;
-        width: 80%;
-        text-align: center;
-        margin: auto;
-        margin-bottom: 10px;
-        font-weight: 600
-    }
-
-    .tela-de-respostas {
-        background-color: var(--branco);
-        border-radius: 10px;
-        margin: auto;
-        gap: 20px;
-        padding: 25px;
-        height: 90%;
-        margin-bottom: 60%;
-        width: 250px;
-    }
-
-    .alguma-duvida {
-        background-color: var(--verde-claro);
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-        text-align: center;
-        margin: auto;
-        gap: 20px;
     }
 
     .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        /* A grid irá criar colunas automaticamente, com cada coluna tendo no mínimo 250px de largura */
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 25px;
         margin: auto;
-
     }
 
+    .experiencias-container {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
 }
