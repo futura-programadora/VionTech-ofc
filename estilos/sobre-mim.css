@@ -285,3 +285,14 @@ header nav > a:hover::after {
         width: 95%;
     }
 }
+
+.titulo-categoria {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #222;
+    margin: 2rem 0 1rem 0;
+    padding-left: 12px;
+    border-left: 4px solid #007bff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
